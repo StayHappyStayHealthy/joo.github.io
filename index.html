@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 미래를 설계하는 광명 진로교육 직무연수</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+:root {
+  --p1: #4A6FA5;
+  --p2: #6B9AC4;
+  --p-light: #EBF2FA;
+  --p-mid: #C5DCF0;
+  --green: #3A9E7A;
+  --green-light: #DFF2EB;
+  --amber: #E8960A;
+  --amber-light: #FEF4DC;
+  --coral: #E05C3A;
+  --coral-light: #FCEAE4;
+  --gray-50: #F8F9FB;
+  --gray-100: #EEF0F4;
+  --gray-200: #DEE2EA;
+  --gray-400: #9BA3B0;
+  --gray-600: #5C6470;
+  --gray-800: #252C36;
+  --text: #1C2330;
+  --r-sm: 8px; --r-md: 12px; --r-lg: 18px;
+  --shadow: 0 2px 12px rgba(74,111,165,0.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans KR', sans-serif; background: var(--gray-50); color: var(--text); line-height: 1.6; }
+
+header { background: linear-gradient(135deg, #2E4F82 0%, #4A6FA5 60%, #6B9AC4 100%); color: #fff; }
+.header-inner { max-width: 920px; margin: 0 auto; padding: 2.75rem 1.5rem 2.25rem; }
+.header-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; background: rgba(255,255,255,0.2); color: #fff; padding: 4px 14px; border-radius: 20px; letter-spacing: 0.04em; margin-bottom: 1.1rem; }
+header h1 { font-family: 'Noto Serif KR', serif; font-size: clamp(22px, 4vw, 32px); font-weight: 600; line-height: 1.3; margin-bottom: 0.4rem; }
+.header-sub { font-size: 13px; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 1rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.2); }
+.meta-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(255,255,255,0.88); }
+.meta-item i { font-size: 15px; }
+
+.zoom-banner { background: #1a3a5c; color: rgba(255,255,255,0.9); padding: 0.65rem 1.5rem; font-size: 12.5px; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.zoom-banner i { font-size: 15px; color: #7EC8F0; }
+.zoom-banner a { color: #7EC8F0; text-decoration: none; font-weight: 500; }
+
+nav { background: #fff; border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.nav-inner { max-width: 920px; margin: 0 auto; display: flex; overflow-x: auto; padding: 0 1rem; scrollbar-width: none; }
+.nav-inner::-webkit-scrollbar { display: none; }
+.tab-btn { display: flex; align-items: center; gap: 5px; font-family: 'Noto Sans KR', sans-serif; font-size: 13px; font-weight: 500; padding: 0 16px; height: 50px; border: none; background: transparent; cursor: pointer; color: var(--gray-600); border-bottom: 2.5px solid transparent; white-space: nowrap; flex-shrink: 0; transition: color 0.15s, border-color 0.15s; }
+.tab-btn:hover { color: var(--p1); }
+.tab-btn.active { color: var(--p1); border-bottom-color: var(--p1); }
+.tab-btn i { font-size: 15px; }
+
+main { max-width: 920px; margin: 0 auto; padding: 2rem 1.5rem; }
+.section { display: none; }
+.section.active { display: block; }
+
+.sec-title { font-size: 15px; font-weight: 700; color: var(--gray-800); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; }
+.sec-title-bar { width: 4px; height: 18px; background: linear-gradient(180deg, var(--p1), var(--p2)); border-radius: 2px; flex-shrink: 0; }
+.divider { height: 1px; background: var(--gray-100); margin: 1.75rem 0; }
+
+.purpose-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.purpose-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--r-md); padding: 1.1rem; box-shadow: var(--shadow); border-top: 3px solid var(--p2); transition: box-shadow 0.15s, transform 0.15s; }
+.purpose-card:hover { box-shadow: 0 4px 20px rgba(74,111,165,0.13); transform: translateY(-1px); }
+.purpose-icon { font-size: 22px; color: var(--p1); margin-bottom: 8px; }
+.purpose-label { font-size: 11px; font-weight: 700; color: var(--p1); letter-spacing: 0.04em; margin-bottom: 5px; }
+.purpose-text { font-size: 12.5px; color: var(--gray-600); line-height: 1.65; }
+
+.school-tabs { display: flex; gap: 6px; margin-bottom: 1.25rem; flex-wrap: wrap; }
+.school-tab { font-family: 'Noto Sans KR', sans-serif; font-size: 13px; font-weight: 500; padding: 7px 18px; border-radius: 20px; border: 1.5px solid var(--gray-200); background: #fff; cursor: pointer; color: var(--gray-600); transition: all 0.15s; }
+.school-tab:hover { border-color: var(--p1); color: var(--p1); }
+.school-tab.active { background: var(--p1); color: #fff; border-color: var(--p1); }
+.school-section { display: none; }
+.school-section.active { display: block; }
+
+.table-wrap { overflow-x: auto; border-radius: var(--r-lg); border: 1px solid var(--gray-200); box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; background: #fff; font-size: 12.5px; }
+thead th { background: var(--p-light); font-weight: 700; font-size: 11px; text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--p-mid); color: var(--p1); letter-spacing: 0.03em; white-space: nowrap; }
+tbody td { padding: 12px 12px; border-bottom: 1px solid var(--gray-100); vertical-align: top; line-height: 1.55; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover td { background: var(--gray-50); }
+
+.badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 9px; border-radius: 20px; white-space: nowrap; }
+.b-online { background: var(--p-light); color: var(--p1); }
+.b-offline { background: var(--green-light); color: var(--green); }
+.b-workshop { background: var(--amber-light); color: #8A5E00; }
+.b-all { background: var(--gray-100); color: var(--gray-600); }
+.b-elem { background: var(--p-light); color: var(--p1); }
+.b-mid { background: var(--green-light); color: var(--green); }
+.b-high { background: var(--amber-light); color: #8A5E00; }
+
+.date-str { font-size: 11.5px; color: var(--gray-600); }
+.session-name { font-weight: 500; font-size: 12.5px; color: var(--gray-800); }
+.session-sub { font-size: 11px; color: var(--gray-400); margin-top: 2px; }
+.session-change { font-size: 11px; color: var(--coral); margin-top: 2px; }
+
+.zoom-link { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--p1); font-weight: 500; background: var(--p-light); padding: 3px 9px; border-radius: var(--r-sm); margin-top: 5px; text-decoration: none; transition: background 0.12s; }
+.zoom-link:hover { background: var(--p-mid); }
+.zoom-link i { font-size: 13px; }
+
+.note { font-size: 11.5px; color: var(--gray-400); margin-top: 10px; display: flex; align-items: center; gap: 5px; }
+
+.completion-box { background: var(--p-light); border-radius: var(--r-md); padding: 1rem 1.25rem; margin-top: 1.25rem; border-left: 4px solid var(--p1); }
+.completion-box .c-title { font-size: 13px; font-weight: 700; color: var(--p1); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.completion-box ul { font-size: 12.5px; color: var(--gray-600); list-style: none; }
+.completion-box ul li { padding: 2px 0 2px 14px; position: relative; }
+.completion-box ul li::before { content: "·"; position: absolute; left: 0; }
+
+.instructor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 10px; }
+.instructor-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--r-md); padding: 1rem; text-align: center; box-shadow: var(--shadow); transition: box-shadow 0.15s, transform 0.15s; }
+.instructor-card:hover { box-shadow: 0 4px 20px rgba(74,111,165,0.13); transform: translateY(-1px); }
+.avatar { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; margin: 0 auto 8px; }
+.av1 { background: var(--p-light); color: var(--p1); }
+.av2 { background: var(--green-light); color: var(--green); }
+.av3 { background: var(--amber-light); color: #8A5E00; }
+.av4 { background: var(--coral-light); color: var(--coral); }
+.av5 { background: #EAF3DE; color: #3B6D11; }
+.instructor-name { font-size: 13px; font-weight: 700; margin-bottom: 2px; color: var(--gray-800); }
+.instructor-org { font-size: 11px; color: var(--gray-600); margin-bottom: 6px; line-height: 1.5; }
+.instructor-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--gray-100); color: var(--gray-600); font-weight: 500; }
+
+.file-list { display: flex; flex-direction: column; gap: 8px; }
+.file-row { display: flex; align-items: center; gap: 12px; padding: 13px 16px; background: #fff; border: 1px solid var(--gray-200); border-radius: var(--r-md); box-shadow: var(--shadow); transition: box-shadow 0.12s; }
+.file-row:hover { box-shadow: 0 4px 16px rgba(74,111,165,0.1); }
+.file-icon { font-size: 22px; color: var(--p1); flex-shrink: 0; }
+.file-info { flex: 1; min-width: 0; }
+.file-name { font-size: 13px; font-weight: 500; color: var(--gray-800); }
+.file-meta { font-size: 11px; color: var(--gray-400); margin-top: 1px; }
+.dl-btn { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 500; padding: 6px 14px; border: 1.5px solid var(--p-mid); border-radius: var(--r-sm); background: var(--p-light); cursor: pointer; color: var(--p1); white-space: nowrap; font-family: 'Noto Sans KR', sans-serif; transition: background 0.12s; text-decoration: none; }
+.dl-btn:hover { background: var(--p-mid); }
+
+.survey-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.survey-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--r-lg); padding: 1.75rem 1.5rem; box-shadow: var(--shadow); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; transition: box-shadow 0.15s, transform 0.15s; }
+.survey-card:hover { box-shadow: 0 4px 20px rgba(74,111,165,0.13); transform: translateY(-2px); }
+.survey-icon { font-size: 36px; }
+.survey-card-title { font-size: 16px; font-weight: 700; color: var(--gray-800); }
+.survey-card-desc { font-size: 12.5px; color: var(--gray-600); line-height: 1.65; }
+.survey-btn { display: inline-flex; align-items: center; gap: 6px; font-family: 'Noto Sans KR', sans-serif; font-size: 13px; font-weight: 700; padding: 9px 20px; border-radius: var(--r-sm); border: none; cursor: pointer; text-decoration: none; transition: background 0.15s; }
+.btn-blue { background: var(--p1); color: #fff; }
+.btn-blue:hover { background: #2E4F82; }
+.btn-green { background: var(--green); color: #fff; }
+.btn-green:hover { background: #2C7A5E; }
+.btn-amber { background: var(--amber); color: #fff; }
+.btn-amber:hover { background: #C07A08; }
+
+footer { background: var(--gray-800); color: rgba(255,255,255,0.55); text-align: center; padding: 1.75rem 1.5rem; font-size: 12px; margin-top: 3rem; }
+footer strong { color: rgba(255,255,255,0.85); }
+
+@media (max-width: 600px) {
+  .header-inner { padding: 1.75rem 1rem 1.5rem; }
+  main { padding: 1.5rem 1rem; }
+  .purpose-grid { grid-template-columns: 1fr; }
+  .instructor-grid { grid-template-columns: repeat(2, 1fr); }
+  .survey-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-badge"><i class="ti ti-school"></i> 2026 직무연수 · 경기도광명교육지원청</div>
+    <h1>미래를 설계하는<br>광명 진로교육 직무연수</h1>
+    <div class="header-sub">경기도광명교육지원청 주관</div>
+    <div class="header-meta">
+      <div class="meta-item"><i class="ti ti-users"></i> 초·중·고 진로전담교사 48명</div>
+      <div class="meta-item"><i class="ti ti-calendar"></i> 2026. 5. 21. – 7. 6.</div>
+      <div class="meta-item"><i class="ti ti-clock"></i> 총 12시간</div>
+      <div class="meta-item"><i class="ti ti-device-laptop"></i> 대면 + 원격 혼합</div>
+    </div>
+  </div>
+</header>
+
+<div class="zoom-banner">
+  <i class="ti ti-video"></i>
+  원격(쌍방향) 줌 접속 &nbsp;·&nbsp; 회의 ID: <strong style="color:#fff;margin:0 3px">282 559 3631</strong> &nbsp;|&nbsp; 암호: <strong style="color:#fff;margin:0 3px">2026</strong>
+  &nbsp;&nbsp;<a href="https://zoom.us/j/2825593631?pwd=2026" target="_blank">바로 접속 →</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <button class="tab-btn active" onclick="switchTab('overview',this)"><i class="ti ti-info-circle"></i> 개요</button>
+    <button class="tab-btn" onclick="switchTab('schedule',this)"><i class="ti ti-calendar"></i> 연수 일정</button>
+    <button class="tab-btn" onclick="switchTab('instructors',this)"><i class="ti ti-user"></i> 강사 소개</button>
+    <button class="tab-btn" onclick="switchTab('files',this)"><i class="ti ti-file"></i> 자료실</button>
+    <button class="tab-btn" onclick="switchTab('survey',this)"><i class="ti ti-clipboard-list"></i> 설문조사</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- 개요 -->
+<div id="tab-overview" class="section active">
+  <div class="sec-title"><span class="sec-title-bar"></span>연수 목적</div>
+  <div class="purpose-grid">
+    <div class="purpose-card"><div class="purpose-icon"><i class="ti ti-microscope"></i></div><div class="purpose-label">교사 성장</div><div class="purpose-text">연수받는 진로전담교사에서 연구하는 진로전담교사로의 성장 지원</div></div>
+    <div class="purpose-card"><div class="purpose-icon"><i class="ti ti-link"></i></div><div class="purpose-label">초·중·고 연계</div><div class="purpose-text">학생의 자기주도적 진로설계역량 함양을 위한 초·중·고 연계 진로교육 운영</div></div>
+    <div class="purpose-card"><div class="purpose-icon"><i class="ti ti-pencil"></i></div><div class="purpose-label">교육과정 설계</div><div class="purpose-text">학생 미래설계 주도성 함양을 위한 진로교육과정 설계·운영 지원</div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="sec-title"><span class="sec-title-bar"></span>운영 방침</div>
+  <div class="purpose-grid">
+    <div class="purpose-card"><div class="purpose-icon"><i class="ti ti-network"></i></div><div class="purpose-label">자발적 네트워크</div><div class="purpose-text">워크숍 및 권역별 협의회 운영을 통한 교사 중심의 자발적 네트워크 형성 지원</div></div>
+    <div class="purpose-card"><div class="purpose-icon"><i class="ti ti-share"></i></div><div class="purpose-label">사례 나눔</div><div class="purpose-text">학교급별 진로교육 사례 발굴 및 상호 나눔을 통한 동반 성장 기회 제공</div></div>
+    <div class="purpose-card"><div class="purpose-icon"><i class="ti ti-tool"></i></div><div class="purpose-label">실용 교육과정</div><div class="purpose-text">학교 현장에 즉시 적용 가능한 실습 및 사례 중심의 실용적 교육과정 구성</div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="sec-title"><span class="sec-title-bar"></span>기대 효과</div>
+  <div class="purpose-grid">
+    <div class="purpose-card"><div class="purpose-icon"><i class="ti ti-trending-up"></i></div><div class="purpose-label">맞춤형 진로교육</div><div class="purpose-text">초·중등 연계 진로교육 운영을 통한 학생 성장 단계별 맞춤형 진로교육 강화</div></div>
+    <div class="purpose-card"><div class="purpose-icon"><i class="ti ti-award"></i></div><div class="purpose-label">교사 전문성 신장</div><div class="purpose-text">진로교육 연구 문화 조성을 통한 진로전담교사 전문성 신장 및 미래형 진로교육 실현</div></div>
+    <div class="purpose-card"><div class="purpose-icon"><i class="ti ti-building-school"></i></div><div class="purpose-label">교육과정 역량 강화</div><div class="purpose-text">현장 사례 중심 연수 운영을 통한 학교 진로교육과정 설계·운영 역량 강화</div></div>
+  </div>
+</div>
+
+<!-- 연수 일정 -->
+<div id="tab-schedule" class="section">
+  <div class="sec-title"><span class="sec-title-bar"></span>연수 일정 (총 12시간)</div>
+  <div class="school-tabs">
+    <button class="school-tab active" onclick="switchSchool('elem',this)">🏫 초등학교</button>
+    <button class="school-tab" onclick="switchSchool('mid',this)">📚 중학교</button>
+    <button class="school-tab" onclick="switchSchool('high',this)">🎓 고등학교</button>
+  </div>
+
+  <!-- 초등 -->
+  <div id="school-elem" class="school-section active">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:48px">순서</th><th style="width:130px">일시</th><th>내용</th><th style="width:60px">대상</th><th style="width:110px">장소</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center"><span class="badge b-online">1</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">5/21(목)<br>15:00~16:30</div></td>
+            <td>
+              <div class="session-name">초등 수업에서 만나는 진로</div>
+              <div class="session-sub">꿈길 및 꿈it(잇)다 시스템</div>
+              <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
+            </td>
+            <td><span class="badge b-elem">초등</span></td>
+            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-offline">2</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">6/1(월)<br>15:30~17:10</div></td>
+            <td><div class="session-name">함께 배우며 성장하는 초등학교 진로연계교육</div></td>
+            <td><span class="badge b-elem">초등</span></td>
+            <td><div class="date-str">광명교육지원청<br>광명실</div></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-offline">3</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">6/18(목)<br>16:00~17:40</div></td>
+            <td>
+              <div class="session-name">미래를 설계하는 진로교육</div>
+              <div class="session-sub">디지털 대전환기, 학생의 미래 역량 지원</div>
+            </td>
+            <td><span class="badge b-all">공통</span></td>
+            <td><div class="date-str">광명교육지원청<br>광명실</div></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-workshop">4</span><br><span style="font-size:10px;color:var(--gray-400)">4H</span></td>
+            <td><div class="date-str">6/24(수)<br>14:30~18:20</div></td>
+            <td>
+              <div class="session-name">진로지원단 워크숍</div>
+              <div class="session-sub">진로연계교육 및 직업체험 활동</div>
+            </td>
+            <td><span class="badge b-all">공통</span></td>
+            <td><div class="date-str">광명시청소년<br>진로진학지원센터</div></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-online">5</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">7/6(월)<br>15:30~17:00</div></td>
+            <td>
+              <div class="session-name">사례로 알아보는 학생 노동인권교육</div>
+              <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
+            </td>
+            <td><span class="badge b-all">공통</span></td>
+            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 중학교 -->
+  <div id="school-mid" class="school-section">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:48px">순서</th><th style="width:130px">일시</th><th>내용</th><th style="width:60px">대상</th><th style="width:110px">장소</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center"><span class="badge b-offline">1</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">6/1(월)<br>15:30~17:10</div></td>
+            <td>
+              <div class="session-name">꿈을 찾으며 나아가는 중학교 진로연계교육</div>
+              <div class="session-sub">노트북 또는 휴대폰 지참</div>
+            </td>
+            <td><span class="badge b-mid">중학교</span></td>
+            <td><div class="date-str">광명교육지원청<br>다온실</div></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-offline">2</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">6/18(목)<br>16:00~17:40</div></td>
+            <td>
+              <div class="session-name">미래를 설계하는 진로교육</div>
+              <div class="session-sub">디지털 대전환기, 학생의 미래 역량 지원</div>
+            </td>
+            <td><span class="badge b-all">공통</span></td>
+            <td><div class="date-str">광명교육지원청<br>광명실</div></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-workshop">3</span><br><span style="font-size:10px;color:var(--gray-400)">4H</span></td>
+            <td><div class="date-str">6/24(수)<br>14:30~18:20</div></td>
+            <td>
+              <div class="session-name">진로지원단 워크숍</div>
+              <div class="session-sub">진로연계교육 및 직업체험 활동</div>
+            </td>
+            <td><span class="badge b-all">공통</span></td>
+            <td><div class="date-str">광명시청소년<br>진로진학지원센터</div></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-online">4</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">6/30(화)<br>16:00~17:30</div></td>
+            <td>
+              <div class="session-name">중등 수업에서 만나는 진로 — 꿈it(잇)다 시스템</div>
+              <div class="session-change">※ 5/21에서 일정 변경</div>
+              <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
+            </td>
+            <td><span class="badge b-mid">중등</span></td>
+            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-online">5</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">7/6(월)<br>15:30~17:00</div></td>
+            <td>
+              <div class="session-name">사례로 알아보는 학생 노동인권교육</div>
+              <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
+            </td>
+            <td><span class="badge b-all">공통</span></td>
+            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 고등학교 -->
+  <div id="school-high" class="school-section">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:48px">순서</th><th style="width:130px">일시</th><th>내용</th><th style="width:60px">대상</th><th style="width:110px">장소</th></tr></thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center"><span class="badge b-offline">1</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">6/1(월)<br>16:00~17:40</div></td>
+            <td>
+              <div class="session-name">미래를 그리며 도약하는 고등학교 진로연계교육</div>
+              <div class="session-sub">각 학교 교육과정계획서, 노트북 지참</div>
+            </td>
+            <td><span class="badge b-high">고등학교</span></td>
+            <td><div class="date-str">광명교육지원청<br>가온실</div></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-offline">2</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">6/18(목)<br>16:00~17:40</div></td>
+            <td>
+              <div class="session-name">미래를 설계하는 진로교육</div>
+              <div class="session-sub">디지털 대전환기, 학생의 미래 역량 지원</div>
+            </td>
+            <td><span class="badge b-all">공통</span></td>
+            <td><div class="date-str">광명교육지원청<br>광명실</div></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-workshop">3</span><br><span style="font-size:10px;color:var(--gray-400)">4H</span></td>
+            <td><div class="date-str">6/24(수)<br>14:30~18:20</div></td>
+            <td>
+              <div class="session-name">진로지원단 워크숍</div>
+              <div class="session-sub">진로연계교육 및 직업체험 활동</div>
+            </td>
+            <td><span class="badge b-all">공통</span></td>
+            <td><div class="date-str">광명시청소년<br>진로진학지원센터</div></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-online">4</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">6/30(화)<br>16:00~17:30</div></td>
+            <td>
+              <div class="session-name">중등 수업에서 만나는 진로 — 꿈it(잇)다 시스템</div>
+              <div class="session-change">※ 5/21에서 일정 변경</div>
+              <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
+            </td>
+            <td><span class="badge b-mid">중등</span></td>
+            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+          </tr>
+          <tr>
+            <td style="text-align:center"><span class="badge b-online">5</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
+            <td><div class="date-str">7/6(월)<br>15:30~17:00</div></td>
+            <td>
+              <div class="session-name">사례로 알아보는 학생 노동인권교육</div>
+              <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
+            </td>
+            <td><span class="badge b-all">공통</span></td>
+            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="note"><i class="ti ti-alert-circle"></i> 일정 및 장소는 상황에 따라 변경될 수 있습니다.</div>
+  <div class="completion-box">
+    <div class="c-title"><i class="ti ti-certificate"></i> 이수 기준</div>
+    <ul>
+      <li>총 연수 시간의 <strong>90% 이상</strong> 수강 시 이수 인정 (12시간 기준 11시간 이상)</li>
+      <li>병가·공가·출장 등으로 인한 결석은 출석 인정 불가</li>
+      <li>배우자, 본인 및 배우자의 직계 존비속 사망으로 결석한 경우 80% 이상 수강 시 이수 인정</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 강사 소개 -->
+<div id="tab-instructors" class="section">
+  <div class="sec-title"><span class="sec-title-bar"></span>강사 소개</div>
+  <div class="instructor-grid">
+    <div class="instructor-card"><div class="avatar av1">이청화</div><div class="instructor-name">이청화 교사</div><div class="instructor-org">배곧라라초등학교</div><span class="instructor-tag">꿈길·꿈it 시스템</span></div>
+    <div class="instructor-card"><div class="avatar av2">곽상경</div><div class="instructor-name">곽상경 교사</div><div class="instructor-org">신성중학교</div><span class="instructor-tag">꿈it 시스템</span></div>
+    <div class="instructor-card"><div class="avatar av3">정나라</div><div class="instructor-name">정나라 교사</div><div class="instructor-org">효천초등학교</div><span class="instructor-tag">초등 진로연계교육</span></div>
+    <div class="instructor-card"><div class="avatar av4">오은하</div><div class="instructor-name">오은하 교사</div><div class="instructor-org">흥진고등학교</div><span class="instructor-tag">중학 진로연계교육</span></div>
+    <div class="instructor-card"><div class="avatar av5">고성임</div><div class="instructor-name">고성임 교사</div><div class="instructor-org">감일백제중학교</div><span class="instructor-tag">고교 진로연계교육</span></div>
+    <div class="instructor-card"><div class="avatar av1">이진우</div><div class="instructor-name">이진우 대표</div><div class="instructor-org">에듀리프트</div><span class="instructor-tag">미래 역량·디지털</span></div>
+    <div class="instructor-card"><div class="avatar av2">강호진</div><div class="instructor-name">강호진 노무사</div><div class="instructor-org">센트럴노무법인</div><span class="instructor-tag">학생 노동인권교육</span></div>
+  </div>
+</div>
+
+<!-- 자료실 -->
+<div id="tab-files" class="section">
+  <div class="sec-title"><span class="sec-title-bar"></span>연수 자료실</div>
+  <div class="file-list">
+    <div class="file-row">
+      <i class="ti ti-file-type-pdf file-icon"></i>
+      <div class="file-info"><div class="file-name">2026 광명 진로교육 직무연수 운영 계획서</div><div class="file-meta">PDF · 학교발송용 공식 문서</div></div>
+      <a class="dl-btn" href="#"><i class="ti ti-download"></i> 다운로드</a>
+    </div>
+    <div class="file-row">
+      <i class="ti ti-file-type-ppt file-icon"></i>
+      <div class="file-info"><div class="file-name">초등 수업에서 만나는 진로 — 꿈길 및 꿈it(잇)다 시스템</div><div class="file-meta">PPT · 5/21 원격 연수용</div></div>
+      <a class="dl-btn" href="#"><i class="ti ti-download"></i> 다운로드</a>
+    </div>
+    <div class="file-row">
+      <i class="ti ti-file-type-ppt file-icon"></i>
+      <div class="file-info"><div class="file-name">초·중·고 진로연계교육 사례 자료</div><div class="file-meta">PPT · 6/1 대면 연수용</div></div>
+      <a class="dl-btn" href="#"><i class="ti ti-download"></i> 다운로드</a>
+    </div>
+    <div class="file-row">
+      <i class="ti ti-file-type-ppt file-icon"></i>
+      <div class="file-info"><div class="file-name">미래를 설계하는 진로교육 강의 자료</div><div class="file-meta">PPT · 6/18 대면 연수용</div></div>
+      <a class="dl-btn" href="#"><i class="ti ti-download"></i> 다운로드</a>
+    </div>
+    <div class="file-row">
+      <i class="ti ti-file-spreadsheet file-icon"></i>
+      <div class="file-info"><div class="file-name">진로지원단 워크숍 활동지</div><div class="file-meta">XLSX · 6/24 워크숍용</div></div>
+      <a class="dl-btn" href="#"><i class="ti ti-download"></i> 다운로드</a>
+    </div>
+    <div class="file-row">
+      <i class="ti ti-file-type-pdf file-icon"></i>
+      <div class="file-info"><div class="file-name">학생 노동인권교육 자료</div><div class="file-meta">PDF · 7/6 원격 연수용</div></div>
+      <a class="dl-btn" href="#"><i class="ti ti-download"></i> 다운로드</a>
+    </div>
+  </div>
+</div>
+
+<!-- 설문조사 -->
+<div id="tab-survey" class="section">
+  <div class="sec-title"><span class="sec-title-bar"></span>설문조사</div>
+  <div class="survey-grid">
+    <div class="survey-card">
+      <div class="survey-icon">📋</div>
+      <div class="survey-card-title">사전 설문</div>
+      <div class="survey-card-desc">연수 시작 전<br>사전 조사에 참여해 주세요.</div>
+      <!-- href="" 안에 구글 설문 링크를 붙여넣으세요 -->
+      <a class="survey-btn btn-blue" href="" target="_blank"><i class="ti ti-external-link"></i> 설문 참여하기</a>
+    </div>
+    <div class="survey-card">
+      <div class="survey-icon">✅</div>
+      <div class="survey-card-title">사후 설문</div>
+      <div class="survey-card-desc">연수 종료 후<br>사후 조사에 참여해 주세요.</div>
+      <!-- href="" 안에 구글 설문 링크를 붙여넣으세요 -->
+      <a class="survey-btn btn-green" href="" target="_blank"><i class="ti ti-external-link"></i> 설문 참여하기</a>
+    </div>
+    <div class="survey-card">
+      <div class="survey-icon">⭐</div>
+      <div class="survey-card-title">만족도 조사</div>
+      <div class="survey-card-desc">연수 만족도 조사에<br>참여해 주세요.</div>
+      <!-- href="" 안에 구글 설문 링크를 붙여넣으세요 -->
+      <a class="survey-btn btn-amber" href="" target="_blank"><i class="ti ti-external-link"></i> 설문 참여하기</a>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <strong>2026 미래를 설계하는 광명 진로교육 직무연수</strong><br>
+  경기도광명교육지원청 | 문의: 광명교육지원청 진로진학팀
+</footer>
+
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+function switchSchool(id, btn) {
+  document.querySelectorAll('.school-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.school-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('school-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

@@ -9,22 +9,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
 :root {
-  --p1: #4A6FA5;
-  --p2: #6B9AC4;
-  --p-light: #EBF2FA;
-  --p-mid: #C5DCF0;
-  --green: #3A9E7A;
-  --green-light: #DFF2EB;
-  --amber: #E8960A;
-  --amber-light: #FEF4DC;
+  --p1: #4A6FA5; --p2: #6B9AC4; --p-light: #EBF2FA; --p-mid: #C5DCF0;
+  --green: #3A9E7A; --green-light: #DFF2EB;
+  --amber: #E8960A; --amber-light: #FEF4DC;
   --coral: #E05C3A;
-  --coral-light: #FCEAE4;
-  --gray-50: #F8F9FB;
-  --gray-100: #EEF0F4;
-  --gray-200: #DEE2EA;
-  --gray-400: #9BA3B0;
-  --gray-600: #5C6470;
-  --gray-800: #252C36;
+  --gray-50: #F8F9FB; --gray-100: #EEF0F4; --gray-200: #DEE2EA;
+  --gray-400: #9BA3B0; --gray-600: #5C6470; --gray-800: #252C36;
   --text: #1C2330;
   --r-sm: 8px; --r-md: 12px; --r-lg: 18px;
   --shadow: 0 2px 12px rgba(74,111,165,0.08);
@@ -95,31 +85,16 @@ tbody tr:hover td { background: var(--gray-50); }
 .session-name { font-weight: 500; font-size: 12.5px; color: var(--gray-800); }
 .session-sub { font-size: 11px; color: var(--gray-400); margin-top: 2px; }
 .session-change { font-size: 11px; color: var(--coral); margin-top: 2px; }
-
 .zoom-link { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--p1); font-weight: 500; background: var(--p-light); padding: 3px 9px; border-radius: var(--r-sm); margin-top: 5px; text-decoration: none; transition: background 0.12s; }
 .zoom-link:hover { background: var(--p-mid); }
 .zoom-link i { font-size: 13px; }
 
 .note { font-size: 11.5px; color: var(--gray-400); margin-top: 10px; display: flex; align-items: center; gap: 5px; }
-
 .completion-box { background: var(--p-light); border-radius: var(--r-md); padding: 1rem 1.25rem; margin-top: 1.25rem; border-left: 4px solid var(--p1); }
 .completion-box .c-title { font-size: 13px; font-weight: 700; color: var(--p1); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
 .completion-box ul { font-size: 12.5px; color: var(--gray-600); list-style: none; }
 .completion-box ul li { padding: 2px 0 2px 14px; position: relative; }
 .completion-box ul li::before { content: "·"; position: absolute; left: 0; }
-
-.instructor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: 10px; }
-.instructor-card { background: #fff; border: 1px solid var(--gray-200); border-radius: var(--r-md); padding: 1rem; text-align: center; box-shadow: var(--shadow); transition: box-shadow 0.15s, transform 0.15s; }
-.instructor-card:hover { box-shadow: 0 4px 20px rgba(74,111,165,0.13); transform: translateY(-1px); }
-.avatar { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; margin: 0 auto 8px; }
-.av1 { background: var(--p-light); color: var(--p1); }
-.av2 { background: var(--green-light); color: var(--green); }
-.av3 { background: var(--amber-light); color: #8A5E00; }
-.av4 { background: var(--coral-light); color: var(--coral); }
-.av5 { background: #EAF3DE; color: #3B6D11; }
-.instructor-name { font-size: 13px; font-weight: 700; margin-bottom: 2px; color: var(--gray-800); }
-.instructor-org { font-size: 11px; color: var(--gray-600); margin-bottom: 6px; line-height: 1.5; }
-.instructor-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--gray-100); color: var(--gray-600); font-weight: 500; }
 
 .file-list { display: flex; flex-direction: column; gap: 8px; }
 .file-row { display: flex; align-items: center; gap: 12px; padding: 13px 16px; background: #fff; border: 1px solid var(--gray-200); border-radius: var(--r-md); box-shadow: var(--shadow); transition: box-shadow 0.12s; }
@@ -152,7 +127,6 @@ footer strong { color: rgba(255,255,255,0.85); }
   .header-inner { padding: 1.75rem 1rem 1.5rem; }
   main { padding: 1.5rem 1rem; }
   .purpose-grid { grid-template-columns: 1fr; }
-  .instructor-grid { grid-template-columns: repeat(2, 1fr); }
   .survey-grid { grid-template-columns: 1fr; }
 }
 </style>
@@ -183,7 +157,6 @@ footer strong { color: rgba(255,255,255,0.85); }
   <div class="nav-inner">
     <button class="tab-btn active" onclick="switchTab('overview',this)"><i class="ti ti-info-circle"></i> 개요</button>
     <button class="tab-btn" onclick="switchTab('schedule',this)"><i class="ti ti-calendar"></i> 연수 일정</button>
-
     <button class="tab-btn" onclick="switchTab('files',this)"><i class="ti ti-file"></i> 자료실</button>
     <button class="tab-btn" onclick="switchTab('survey',this)"><i class="ti ti-clipboard-list"></i> 설문조사</button>
   </div>
@@ -239,7 +212,7 @@ footer strong { color: rgba(255,255,255,0.85); }
               <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
             </td>
             <td><span class="badge b-elem">초등</span></td>
-            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+            <td><span class="badge b-online">원격(쌍방향)</span></td>
           </tr>
           <tr>
             <td style="text-align:center"><span class="badge b-offline">2</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
@@ -276,7 +249,7 @@ footer strong { color: rgba(255,255,255,0.85); }
               <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
             </td>
             <td><span class="badge b-all">공통</span></td>
-            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+            <td><span class="badge b-online">원격(쌍방향)</span></td>
           </tr>
         </tbody>
       </table>
@@ -328,7 +301,7 @@ footer strong { color: rgba(255,255,255,0.85); }
               <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
             </td>
             <td><span class="badge b-mid">중등</span></td>
-            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+            <td><span class="badge b-online">원격(쌍방향)</span></td>
           </tr>
           <tr>
             <td style="text-align:center"><span class="badge b-online">5</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
@@ -338,7 +311,7 @@ footer strong { color: rgba(255,255,255,0.85); }
               <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
             </td>
             <td><span class="badge b-all">공통</span></td>
-            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+            <td><span class="badge b-online">원격(쌍방향)</span></td>
           </tr>
         </tbody>
       </table>
@@ -390,7 +363,7 @@ footer strong { color: rgba(255,255,255,0.85); }
               <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
             </td>
             <td><span class="badge b-mid">중등</span></td>
-            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+            <td><span class="badge b-online">원격(쌍방향)</span></td>
           </tr>
           <tr>
             <td style="text-align:center"><span class="badge b-online">5</span><br><span style="font-size:10px;color:var(--gray-400)">2H</span></td>
@@ -400,7 +373,7 @@ footer strong { color: rgba(255,255,255,0.85); }
               <a class="zoom-link" href="https://zoom.us/j/2825593631?pwd=2026" target="_blank"><i class="ti ti-video"></i> 줌 접속</a>
             </td>
             <td><span class="badge b-all">공통</span></td>
-            <td><span class="badge b-online">원격<br>(쌍방향)</span></td>
+            <td><span class="badge b-online">원격(쌍방향)</span></td>
           </tr>
         </tbody>
       </table>
@@ -417,8 +390,6 @@ footer strong { color: rgba(255,255,255,0.85); }
     </ul>
   </div>
 </div>
-
-
 
 <!-- 자료실 -->
 <div id="tab-files" class="section">
